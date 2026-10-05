@@ -1,5 +1,5 @@
-https://github.com/
-https://pages.github.com/
-https://www.docker.com/
-https://kubernetes.io/
-https://www.nginx.com/
+Repository:
+https://github.com/humnamalik1912/devops-a-23
+
+GitHub Pages:
+https://humnamalik1912.github.io/devops-a-23/

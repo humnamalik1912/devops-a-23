@@ -1,33 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: seta-seat-deployment
+  name: devops-a-23
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: seta-seat
+      app: devops-a-23
   template:
     metadata:
       labels:
-        app: seta-seat
+        app: devops-a-23
     spec:
       containers:
-        - name: seta-seat-container
-          image: seta-seat:latest
+        - name: devops-a-23
+          image: devops-a-23:v1
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
-          imagePullPolicy: IfNotPresent
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: seta-seat-service
-spec:
-  selector:
-    app: seta-seat
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
-  type: LoadBalancer

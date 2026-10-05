@@ -1,12 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: seta-seat-service
+  name: devops-a-23
 spec:
+  type: NodePort
   selector:
-    app: seta-seat
+    app: devops-a-23
   ports:
-    - protocol: TCP
-      port: 80
+    - port: 80
       targetPort: 80
-  type: ClusterIP
