@@ -1,0 +1,12 @@
+cd SetA_23
+python -m http.server 8000 --directory site
+
+# Docker
+docker build -t seta-seat .
+docker run -p 8080:80 seta-seat
+
+# Kubernetes
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+kubectl get pods
+kubectl get svc
